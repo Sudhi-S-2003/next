@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-xl shadow-lg max-w-lg w-full">
-        <h1 className="text-3xl font-semibold text-center text-gray-700 mb-4">Welcome to the User App</h1>
+        <h1 className="text-center text-gradient">Welcome to the User App</h1>
         <p className="text-center text-gray-500 mb-6">Current User: {userData.name || "None"}</p>
 
         {userData.username ? (

@@ -1,3 +1,11 @@
+/* Import Tailwind CSS base, components, and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom utility class for gradient text */
+@layer utilities {
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
+  }
+}
