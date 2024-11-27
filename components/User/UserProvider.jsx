@@ -1,5 +1,4 @@
-// src/UserProvider.js
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import Alertbox from "./Alertbox";
 
 // Create a UserContext
@@ -14,6 +13,17 @@ function UserProvider({ children }) {
   const [alertMessage, setAlertMessage] = useState("");
   const [alertType, setAlertType] = useState("");
 
+  // Retrieve seller_Np_ref from localStorage and set userData
+  useEffect(() => {
+    const storedSellerData = localStorage.getItem("seller_Np_ref");
+    if (storedSellerData) {
+      const parsedData = JSON.parse(storedSellerData);
+      if (parsedData.userData) {
+        setUserData(parsedData.userData);
+      }
+    }
+  }, []);
+
   // Login Component
   const Login = ({ name, username, data = [] }) => {
     if (!name || !username) {
@@ -22,11 +32,18 @@ function UserProvider({ children }) {
       return;
     }
 
-    setUserData({
-      name: name,
-      username: username,
-      data: data,
-    });
+    const newUserData = { name, username, data };
+
+    // Get the current stored seller_Np_ref object, or create a new one
+    const storedSellerData = JSON.parse(localStorage.getItem("seller_Np_ref")) || {};
+
+    // Update the userData key with the new user data
+    const updatedSellerData = { ...storedSellerData, userData: newUserData };
+
+    // Save the updated object back to localStorage
+    localStorage.setItem("seller_Np_ref", JSON.stringify(updatedSellerData));
+
+    setUserData(newUserData);
     setAlertMessage("Login successful");
     setAlertType("success");
   };
@@ -38,6 +55,13 @@ function UserProvider({ children }) {
       setAlertType("error");
       return;
     }
+
+    // Clear userData from the seller_Np_ref object
+    const storedSellerData = JSON.parse(localStorage.getItem("seller_Np_ref")) || {};
+    const updatedSellerData = { ...storedSellerData, userData: {} };
+
+    // Save the updated object back to localStorage
+    localStorage.setItem("seller_Np_ref", JSON.stringify(updatedSellerData));
 
     setUserData({
       name: "",
