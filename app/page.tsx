@@ -8,6 +8,8 @@ export default function Home() {
       </Link>
       <Link href="/seller" className="block text-blue-500 hover:underline text-lg">Seller </Link>
       <Linkcomponent  name={"OTP"}url={"/otp"}/>
+      <Linkcomponent  name={"Editor"}url={"/editor"}/>
+
     </div>
   );
 }
