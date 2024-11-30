@@ -20,9 +20,13 @@ function PartComponent({ data: initialData }) {
         setEditIndex(index);
     };
 
-    const saveProcess = (index, newName) => {
+    const saveProcess = (index, newName,isFolder) => {
         if (newName.trim() === "") return;
-
+        if(!isFolder){
+            if(!newName.split(".")[1]){
+                newName=newName.concat(".txt")
+            }
+        }
         const updatedData = [...data]; // Clone the data array to avoid mutating directly
 
         if (type === "rename") {
@@ -40,10 +44,10 @@ function PartComponent({ data: initialData }) {
         }
 
         setData(updatedData); // Update state with the modified data
-        resetEditState();
+        resetProcessState();
     };
 
-    const resetEditState = () => {
+    const resetProcessState = () => {
         setEditIndex(null);
         setNewName("");
         setType("");
@@ -91,13 +95,13 @@ function PartComponent({ data: initialData }) {
                                         />
                                         <button
                                             className="bg-green-600 mx-2 text-white px-2"
-                                            onClick={() => saveProcess(index, newName)}
+                                            onClick={() => saveProcess(index, newName,dataObj.isFolder)}
                                         >
                                             Save
                                         </button>
                                         <button
                                             className="bg-red-600 mx-2 text-white px-2"
-                                            onClick={resetEditState}
+                                            onClick={resetProcessState}
                                         >
                                             Cancel
                                         </button>
@@ -157,13 +161,13 @@ function PartComponent({ data: initialData }) {
                                     />
                                     <button
                                         className="bg-green-600 mx-2 text-white px-2"
-                                        onClick={() => saveProcess(index, newName)}
+                                        onClick={() => saveProcess(index, newName,dataObj.isFolder)}
                                     >
                                         Save
                                     </button>
                                     <button
                                         className="bg-red-600 mx-2 text-white px-2"
-                                        onClick={resetEditState}
+                                        onClick={resetProcessState}
                                     >
                                         Cancel
                                     </button>
