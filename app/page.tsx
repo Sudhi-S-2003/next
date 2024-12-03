@@ -7,9 +7,9 @@ export default function Home() {
       <Link href="/buyer" className="block text-blue-500 hover:underline text-lg">Buyer
       </Link>
       <Link href="/seller" className="block text-blue-500 hover:underline text-lg">Seller </Link>
-      <Linkcomponent  name={"OTP"}url={"/otp"}/>
-      <Linkcomponent  name={"Editor"}url={"/editor"}/>
-
+      <Linkcomponent name={"OTP"} url={"/otp"} />
+      <Linkcomponent name={"Editor"} url={"/editor"} />
+      <Linkcomponent name={"RoadMaps"} url={"/roadmaps"} />
     </div>
   );
 }
