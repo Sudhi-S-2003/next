@@ -36,7 +36,7 @@
   { "level": 35, "desc": "Omnipotent level", "presentage": 100, "status": "Unlocked" },
   { "level": 36, "desc": "Invincible level", "presentage": 100, "status": "Unlocked" },
   { "level": 37, "desc": "Omniscient level", "presentage": 100, "status": "Unlocked" },
-  { "level": 38, "desc": "Indestructible level", "presentage": 70, "status": "Locked" },
+  { "level": 38, "desc": "Indestructible level", "presentage": 70, "status": "Unlocked" },
   { "level": 39, "desc": "All-knowing level", "presentage": 0, "status": "Locked" },
   { "level": 40, "desc": "Unstoppable level", "presentage": 0, "status": "Locked" },
   { "level": 41, "desc": "All-conquering level", "presentage": 0, "status": "Locked" },

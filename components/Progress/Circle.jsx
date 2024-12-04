@@ -1,8 +1,8 @@
 function Circle({ level, topval, desc, type }) {
     const color =
-        type === "complete"
+        type === "Complete"
             ? "bg-green-500"
-            : type === "incomplete"
+            : type === "In-Complete"
             ? "bg-red-500"
             : type === "Locked"
             ? "bg-slate-500"
