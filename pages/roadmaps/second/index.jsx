@@ -36,15 +36,15 @@ const App = () => {
         </div>
 
         {/* Animated S-shaped Curve */}
-        <svg width="500" height="200" xmlns="http://www.w3.org/2000/svg" className="mt-[-50px]">
+        <svg width="500" height="150" xmlns="http://www.w3.org/2000/svg" className="mt-[-50px]">
           <path
-            d="M 450 50 C 250 150, 150 150, 150 250"
+            d="M 500 10 C 250 150, 150 150, 10 210"
             stroke="white"
             fill="none"
             strokeWidth="4"
           />
           <motion.path
-            d="M 450 50 C 250 150, 150 150, 150 250"
+            d="M 500 10 C 250 150, 150 150, 10 210"
             stroke="blue"
             stroke-opacity="0.7"
             fill="none"
@@ -70,15 +70,15 @@ const App = () => {
         </div>
 
         {/* Animated S-shaped Curve */}
-        <svg width="500" height="200" xmlns="http://www.w3.org/2000/svg" className="mt-[-50px]">
+        <svg width="500" height="150" xmlns="http://www.w3.org/2000/svg" className="mt-[-50px]">
           <path
-            d="M 350 50 C 100 150, 150 150, 25 250"
+            d="M 400 10 C 20 170, 70 150, 10 200"
             stroke="white"
             fill="none"
             strokeWidth="4"
           />
           <motion.path
-            d="M 350 50 C 100 150, 150 150, 25 250"
+            d="M 400 10 C 20 170, 70 150, 10 200"
             stroke="blue"
             stroke-opacity="0.7"
             fill="none"

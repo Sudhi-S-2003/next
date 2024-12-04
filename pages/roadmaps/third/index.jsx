@@ -1,6 +1,6 @@
 import React from "react";
 import Linkcomponent from "@/components/common/Linkcomponent";
-import CardCircleProcess from "../../../components/Progress/CardCircleProcess";
+import BaseCardCircleProcess from "../../../components/Progress/BaseCardCircleProcess";
 
 const App = () => {
   return (
@@ -8,7 +8,7 @@ const App = () => {
       {/* Back Link */}
       <Linkcomponent name={"Back"} url={"/roadmaps"} style={{ color: "white" }} />
     
-   <CardCircleProcess/>
+   <BaseCardCircleProcess/>
     </div>
   );
 };
