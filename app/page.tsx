@@ -10,6 +10,7 @@ export default function Home() {
       <Linkcomponent name={"OTP"} url={"/otp"} />
       <Linkcomponent name={"Editor"} url={"/editor"} />
       <Linkcomponent name={"RoadMaps"} url={"/roadmaps"} />
+      <Linkcomponent name={"SVG"} url={"/svg"} />
     </div>
   );
 }
