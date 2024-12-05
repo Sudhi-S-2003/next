@@ -5,6 +5,8 @@ import Line from "../../../components/Svg/Components/Line";
 import Ellipse from "../../../components/Svg/Components/Ellipse";
 import Polygon from "../../../components/Svg/Components/Polygon";
 import Polyline from "../../../components/Svg/Components/Polyline";
+import Text from "../../../components/Svg/Components/Text";
+import Tspan from "../../../components/Svg/Components/Tspan";
 
 function index() {
     return (
@@ -19,11 +21,12 @@ function index() {
             <Rectangle fill={"blue"} x={"100"} y={120} root={{ color: "red", stroke: "green" }} />
 
             {/* Line SVG with a blue stroke and x2 coordinate of 200 */}
-            <Line x2="200" stroke="blue" strokeWidth="1"/>
-            <Ellipse rx="90"ry="30"/>
+            <Line x2="200" stroke="blue" strokeWidth="1" root={{ height: "10" }} />
+            <Ellipse rx="90" ry="30" />
             <Polygon p1="10,10" p2="100,100" p3="200,10" />
-            <Polyline p1="10,10" p2="100,100" p3="200,10" fill="none"/>
-
+            <Polyline p1="10,10" p2="100,100" p3="200,10" fill="none" />
+            <Text data="Welcome" fill="red" style={{ fontSize: "30px" }} />
+            <Tspan tspans={[{ data: "dummy", fill: "yellow" }, { data: "dummy", fill: "yellow" }]} />
         </div>
     )
 }
