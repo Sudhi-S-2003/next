@@ -11,6 +11,7 @@ export default function Home() {
       <Linkcomponent name={"Editor"} url={"/editor"} />
       <Linkcomponent name={"RoadMaps"} url={"/roadmaps"} />
       <Linkcomponent name={"SVG"} url={"/svg"} />
+      <Linkcomponent name={"Localstorage"} url={"/localstorage"} />
     </div>
   );
 }
